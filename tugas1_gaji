@@ -1,0 +1,92 @@
+using System;
+
+namespace Tugas_MCCDTS
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // variabel
+            int input;
+            //looping
+            for (input = 1; input <= 2; input++)
+            {
+                Console.WriteLine("");
+                Console.WriteLine("============================================================");
+                Console.WriteLine("                        Gaji Karyawan    ");
+                Console.WriteLine("============================================================");
+                Console.WriteLine("");
+                Console.WriteLine(" 1. Golongan Gaji Karyawan ");
+                Console.WriteLine(" 2. Data Karyawan ");
+                Console.WriteLine("");
+                Console.WriteLine("============================================================");
+                Console.Write(" Silahkan masukkan nomor pilihan :");
+                input = Convert.ToInt32(Console.ReadLine());
+                // if else
+                if ((input >= 1) && (input <= 2))
+                { //comparison & conditional operator
+                    switch (input)
+                    {// switch case
+                        case 1:
+                            Console.WriteLine("");
+                            gaji();
+                            break;
+                        case 2:
+                            Console.WriteLine("");
+                            kary();
+                            break;
+                    }
+                }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("Data Tidak Ditemukan");
+                    Console.WriteLine("");
+                }
+            }
+            
+        }
+        //method void
+        static void gaji()
+        {
+            Console.Clear();
+            Console.WriteLine("------------------------------------------------------------------------------------------------");
+            Console.WriteLine("                            Selamat datang di data golongan gaji karyawan                       ");
+
+            Console.WriteLine("================================================================================================");
+            Console.WriteLine("                                     Data Golongan Gaji Karyawan                                ");
+            Console.WriteLine("================================================================================================");
+            Console.WriteLine();
+            Console.WriteLine("------------------------------------------------------------------------------------------------");
+            Console.WriteLine("| No | Gaji Pokok   | Tunjangan Kesehatan | Tunjangan Transport | Tunjangan Makan | Total Gaji  ");
+            Console.WriteLine("------------------------------------------------------------------------------------------------");
+            Console.WriteLine("| 1  | Rp 3.000.000 | Rp 300.000          | Rp 100.000          | Rp 100.000      | Rp 3.500.000");
+            Console.WriteLine("| 2  | Rp 2.000.000 | Rp 200.000          | Rp 80.000           | Rp 80.000       | Rp 2.360.000");
+            Console.WriteLine("| 3  | Rp 1.000.000 | Rp 100.000          | Rp 50.000           | Rp 50.000       | Rp 1.200.000");
+            Console.WriteLine("------------------------------------------------------------------------------------------------");
+
+        }
+        //method void
+        static void kary()
+        {
+            Console.Clear();
+            Console.WriteLine("------------------------------------------------------------------------------------------------");
+            Console.WriteLine("                            Selamat datang di data karyawan                       ");
+
+            Console.WriteLine("================================================================================================");
+            Console.WriteLine("                                     Data Karyawan                                ");
+            Console.WriteLine("================================================================================================");
+            Console.WriteLine();
+            Console.WriteLine("------------------------------------------------------------------------------------------------");
+            Console.WriteLine("| No | ID  |       NIK      | Golongan |  Nama Lengkap |    Jabatan  ");
+            Console.WriteLine("------------------------------------------------------------------------------------------------");
+            Console.WriteLine("| 1  | 101 |3304015671889991|    2     | Ayu Lestari   | Staff       ");
+            Console.WriteLine("| 2  | 102 |3304015671889992|    3     | Danang Subroto| Administrasi");
+            Console.WriteLine("| 3  | 103 |3304015671889993|    3     | Mayang Ananda | Administrasi");
+            Console.WriteLine("| 4  | 104 |3304015671889994|    1     | Agus Haryanto | Manajer     ");
+            Console.WriteLine("| 5  | 105 |3304015671889995|    2     | Nur Hasna     | Staff       ");
+            Console.WriteLine("------------------------------------------------------------------------------------------------");
+
+        }
+    }
+}
